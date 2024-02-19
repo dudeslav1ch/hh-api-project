@@ -19,6 +19,7 @@ def user_interaction():
     json_saver = JSONSaver()
     json_saver.save_vacancies(vacancies_getter)
     file_vacancies = json_saver.read_file()
+    json_saver.delete_vacancies()
 
     vacancies = Vacancy.cast_to_object_list(file_vacancies, int(user_salary))
     sorted_vacancies = sorted(vacancies)
