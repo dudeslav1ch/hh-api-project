@@ -1,0 +1,69 @@
+[
+  {
+    "name": "Vacancy1",
+    "url": "bla1.com",
+    "area": {
+      "name": "Санкт-Петербург"
+    },
+    "snippet": {
+      "requirement": "test1"
+    },
+    "salary": {
+      "from": 80000,
+      "to": 80000
+    }
+  },
+  {
+    "name": "Vacancy2",
+    "url": "bla2.com",
+    "area": {
+      "name": "Москва"
+    },
+    "snippet": {
+      "requirement": "test1"
+    },
+    "salary": {
+      "from": null,
+      "to": 80000
+    }
+  },
+  {
+    "name": "Vacancy3",
+    "url": "bla3.com",
+    "area": {
+      "name": "Москва"
+    },
+    "snippet": {
+      "requirement": "test1"
+    },
+    "salary": {
+      "from": 50000,
+      "to": 80000
+    }
+  },
+  {
+    "name": "Vacancy4",
+    "url": "bla4.com",
+    "area": {
+      "name": "Москва"
+    },
+    "snippet": {
+      "requirement": "test1"
+    },
+    "salary": null
+  },
+  {
+    "name": "Vacancy4",
+    "url": "bla4.com",
+    "area": {
+      "name": "Москва"
+    },
+    "snippet": {
+      "requirement": "test1"
+    },
+    "salary": {
+      "from": 80000,
+      "to": 150000
+    }
+  }
+]
