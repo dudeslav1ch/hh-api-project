@@ -2,6 +2,13 @@ class Vacancy:
     list_vacancies = []
 
     def __init__(self, name_vacancy, city, salary_from, salary_to, url):
+        """
+        :param name_vacancy: название вакансии
+        :param city: город вакансии
+        :param salary_from: минимальная зп
+        :param salary_to: максимальная зп
+        :param url: ссылка на ваканисю
+        """
         self.name_vacancy = name_vacancy
         self.city = city
         self.salary_from = salary_from
@@ -18,10 +25,16 @@ class Vacancy:
 
     def __gt__(self, other):
         if isinstance(other, self.__class__):
-            return self.salary_to > other.salary_to
+            return self.salary_from > other.salary_from
 
     @classmethod
     def cast_to_object_list(cls, list_vacancy, salary_from):
+        """
+        Создает CLS из vacancies.json
+        :param list_vacancy: json файл
+        :param salary_from: минимальная зп, указанная пользователем
+        :return: список с данными о вакансии
+        """
         for vacancy in list_vacancy:
             name_vacancy = vacancy['name']
             url = vacancy['url']
@@ -42,8 +55,13 @@ class Vacancy:
 
     @staticmethod
     def print_vacancies(vacancies, count):
+        """
+        Выводит итоговую информацию по вакансиям
+        :param vacancies: отсортированные вакансии
+        :param count: количество вакансий которые хочет видить пользователь
+        """
         for vacancy in vacancies[:int(count)]:
-            print(f"\nВакансия: {vacancy.name}")
+            print(f"\nВакансия: {vacancy.name_vacancy}")
             print(f"Город: {vacancy.city}")
             print(f"Заработанная плата: {vacancy.salary_from} - {vacancy.salary_to}")
             print(f"URL: {vacancy.url}\n")
