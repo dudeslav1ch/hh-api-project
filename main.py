@@ -4,7 +4,6 @@ from src.Vacancy import Vacancy
 
 
 def user_interaction():
-    platforms = ["HeadHunter"]
     hh_api = GetApiHh()
 
     search_query = input("Введите поисковый запрос: ").title()

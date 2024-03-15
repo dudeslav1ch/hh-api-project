@@ -24,7 +24,7 @@ class JSONSaver(AbstractJsonSaver):
         :param vacancies: список вакансий
         """
         with open(DATA, "w", encoding='utf-8') as file:
-            file.write(json.dumps(vacancies, indent=2, ensure_ascii=False))
+            json.dump(vacancies, file, indent=2, ensure_ascii=False)
 
     def read_file(self):
         """
